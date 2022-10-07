@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "Gestorum",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
