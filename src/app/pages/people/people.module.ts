@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PeoplePageRoutingModule } from './people-routing.module';
 
 import { PeoplePage } from './people.page';
+import { UserComponent } from '../../../../src/app/components/user/user.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { PeoplePage } from './people.page';
     IonicModule,
     PeoplePageRoutingModule
   ],
-  declarations: [PeoplePage]
+  declarations: [PeoplePage, UserComponent]
 })
 export class PeoplePageModule {}

@@ -9,4 +9,8 @@
 
 <ion-content>
   <ion-button routerLink="../home"expand="block">Volver al Home</ion-button>
+</ion-content>  
+
+<ion-content>
+  <app-user *ngFor="let user of getUser()" [userInput]="user"></app-user>
 </ion-content>
