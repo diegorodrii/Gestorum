@@ -18,7 +18,6 @@ export class UserDetailComponent implements OnInit {
       this.form.controls.id.setValue(user.id);
       this.form.controls.name.setValue(user.name);
       this.form.controls.nickname.setValue(user.nickname);
-      // this.form.controls.picture.setValue(person.picture);
       this.mode = "Edit";
     }
   }

@@ -5,7 +5,7 @@ import { User } from '../models/person.model';
   providedIn: 'root'
 })
 export class PeopleService {
-  public people: User[] = [
+  public _people: User[] = [
   {
     id:0,
     name:'Diego',
@@ -32,12 +32,34 @@ export class PeopleService {
   }
 
   ]
+
+  id:number = this._people.length+1;
+
   constructor() { }
-  public getUser(): User[] {
-    return this.people;
+
+  public getPeople(): User[] {
+    return this._people;
   }
 
-  public getUserById(id: number): User{
-    return this.people[id];
+  public getPeopleById(id: number): User{
+    return this._people[id];
+  }
+
+  addUser(user:User){
+    user.id = this.id++;
+    this._people.push(user);
+  }
+
+  updateUser(user:User){
+    var _user = this._people.find(p=>p.id==user.id);
+    if(_user){
+      _user.name = user.name;
+      _user.nickname = user.nickname;
+    }
+    
+  }
+
+  deleteUserById(id:number){
+    this._people = this._people.filter(p=>p.id != id); 
   }
 }

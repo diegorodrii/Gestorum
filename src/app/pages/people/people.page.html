@@ -1,16 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>People</ion-title>
+    <ion-title>Users</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="../home"expand="block">Volver al Home</ion-button>
-</ion-content>  
+  <ion-item>
+    <ion-button (click)="onNewUser()" style="margin:10px;width:50px;height:50px;--border-radius:50%" slot="start"
+      icon-only>
+      <ion-icon style="zoom:2" name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-item *ngFor="let user of getPeople()">
+    <app-user [userInput]="user"></app-user>
+    <ion-button (click)="onEditUser(user)">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-button>
+    <ion-button (click)="onDeleteUser(user)">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
 
-<ion-content>
-  <app-user *ngFor="let user of getUser()" [userInput]="user"></app-user>
 </ion-content>
