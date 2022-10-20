@@ -1,18 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la persona</ion-title>
+    <ion-title>Datos de la Tarea</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>Formulario creación usuario</ion-item>
+  <ion-item>Formulario creación tarea</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
       <ion-label position="floating"> Nombre de la Tarea </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce la tarea"
-      formControlName="name"
+      formControlName="taskName"
       ></ion-input>
     </ion-item>
     
@@ -21,7 +21,7 @@
       <ion-input
       type="text"
       placeholder="Introduce la descripción de la tarea"
-      formControlName="Description"
+      formControlName="taskDescription"
       ></ion-input>
     </ion-item>
 
@@ -30,7 +30,7 @@
       <ion-input
       type="text"
       placeholder="Introduce la dificultad de la tarea"
-      formControlName="Difficulty"
+      formControlName="taskDifficulty"
       ></ion-input>
     </ion-item>
 

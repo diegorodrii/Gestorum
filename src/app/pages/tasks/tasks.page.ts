@@ -24,7 +24,7 @@ export class TasksPage implements OnInit {
       taskName: '',
       taskDescription: '',
       taskDifficulty: ''
-    })
+    });
   }
 
   ngOnInit() {

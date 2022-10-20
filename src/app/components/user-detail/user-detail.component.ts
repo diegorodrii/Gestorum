@@ -21,16 +21,16 @@ export class UserDetailComponent implements OnInit {
       this.mode = "Edit";
     }
   }
-  constructor(private userSVC: PeopleService, private fb:FormBuilder, private modal:ModalController) {
+  constructor(private userSVC: PeopleService, private fb: FormBuilder, private modal: ModalController) {
     this.form = this.fb.group({
-      id:[null],
-      name:['', [Validators.required]],
-      nickname:['', [Validators.required]]
+      id: [null],
+      name: ['', [Validators.required]],
+      nickname: ['', [Validators.required]]
     })
   }
   ngOnInit() { }
 
-  createUser(){
+  createUser() {
     console.log(this.form.value); //It is called when push the form button
   }
 
@@ -40,11 +40,11 @@ export class UserDetailComponent implements OnInit {
     }, 3000);
   }
 
-  onSubmit(){
-    this.modal.dismiss({user: this.form.value, mode:this.mode}, 'ok');
+  onSubmit() {
+    this.modal.dismiss({ user: this.form.value, mode: this.mode }, 'ok');
   }
 
-  onDismiss(result){
+  onDismiss(result) {
     this.modal.dismiss(null, 'cancel');
   }
 
