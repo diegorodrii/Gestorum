@@ -5,8 +5,10 @@
     </ion-buttons>
     <ion-title>Assign</ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="../home" expand="block">Volver al Home</ion-button>
-</ion-content>
+  <ion-item *ngFor="let assign of getAssignments()">
+    <app-assignment [assign]="assign"></app-assignment>
+  </ion-item></ion-content>

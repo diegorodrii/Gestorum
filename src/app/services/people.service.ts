@@ -7,28 +7,28 @@ import { User } from '../models/person.model';
 export class PeopleService {
   public _people: User[] = [
   {
-    id:0,
-    name:'Diego',
-    nickname:'Rodri',
-    image:''
-  },
-  {
     id:1,
-    name:'Alberto',
-    nickname:'Parra',
-    image:''
+    name:'Diego',
+    nickname:'Aguilera',
+    image:'https://drive.google.com/uc?export=view&id=1BHdTeQoWC1MsI_UlT0Z_Hb0mNyNpdYf5'
   },
   {
     id:2,
-    name:'Gabriela',
-    nickname:'Gaby',
-    image:''
+    name:'Alberto',
+    nickname:'Parra',
+    image:'https://drive.google.com/uc?export=view&id=1p_7irDllBxDp-PGoUWPnpEKudQNewZPL'
   },
   {
     id:3,
+    name:'Gabriela',
+    nickname:'Gaby',
+    image:'https://drive.google.com/uc?export=view&id=12EdF_gRoVzOBdbOiYU7SuwsCkGhud8He'
+  },
+  {
+    id:4,
     name:'Alvaro',
     nickname:'Alvaroski',
-    image:''
+    image:'https://drive.google.com/uc?export=view&id=1mb2oDNf4giw3C_jInMS3tGwP_WCupWF2'
   }
 
   ]

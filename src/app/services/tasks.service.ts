@@ -10,25 +10,32 @@ export class TasksService {
     id:0,
     taskName:'Crear página web',
     taskDescription:'Es importante una web para la app para llegar al máximo de clientes posibles',
-    taskDifficulty:'Alta'
+    taskDifficulty:'Alta',
+    taskSeconds: 23000
+
   },
   {
     id:1,
     taskName:'Solucionar fallos de la app',
     taskDescription:'Diferentes fallos en la pasarela de compra',
-    taskDifficulty:'Muy alta'
+    taskDifficulty:'Muy alta',
+    taskSeconds: 21000
   },
   {
     id:2,
     taskName:'Contactar con los usuarios de paquetes no insertados',
     taskDescription:'Varios paquetes no han entrado bien a la base de datos y hay que comunicarselo a los clientes afectados',
-    taskDifficulty:'Baja'
+    taskDifficulty:'Baja',
+    taskSeconds: 20008
+
   },
   {
     id:3,
     taskName:'Arreglar ordenador mesa 3',
     taskDescription:'Fallos de refrigeración de la máquina',
-    taskDifficulty:'Media'
+    taskDifficulty:'Media',
+    taskSeconds: 72000
+
   }
 
   ]
