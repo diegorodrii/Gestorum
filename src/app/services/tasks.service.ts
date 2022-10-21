@@ -7,34 +7,42 @@ import { Task } from '../models/task.model';
 export class TasksService {
   public _tasks: Task[] = [
   {
-    id:0,
+    id:1,
     taskName:'Crear página web',
     taskDescription:'Es importante una web para la app para llegar al máximo de clientes posibles',
     taskDifficulty:'Alta',
-    taskSeconds: 23000
+    taskSeconds: 23000,
+    taskImage:'https://drive.google.com/uc?export=view&id=12ER9uCvjon9-eF_kM7yZckFtdIG79ZTn'
+
 
   },
   {
-    id:1,
+    id:2,
     taskName:'Solucionar fallos de la app',
     taskDescription:'Diferentes fallos en la pasarela de compra',
     taskDifficulty:'Muy alta',
-    taskSeconds: 21000
-  },
-  {
-    id:2,
-    taskName:'Contactar con los usuarios de paquetes no insertados',
-    taskDescription:'Varios paquetes no han entrado bien a la base de datos y hay que comunicarselo a los clientes afectados',
-    taskDifficulty:'Baja',
-    taskSeconds: 20008
+    taskSeconds: 21000,
+    taskImage:'https://drive.google.com/uc?export=view&id=1SA3Xf6m2Bnvyvu4iAkWlgBuVXXovjDVg'
 
   },
   {
     id:3,
+    taskName:'Contactar con los usuarios de paquetes no insertados',
+    taskDescription:'Varios paquetes no han entrado bien a la base de datos y hay que comunicarselo a los clientes afectados',
+    taskDifficulty:'Baja',
+    taskSeconds: 20008,
+    taskImage:'https://drive.google.com/uc?export=view&id=1WRDjY0JzvaiZ1q3rChYemCEJueSZ9_CN'
+
+
+  },
+  {
+    id:4,
     taskName:'Arreglar ordenador mesa 3',
     taskDescription:'Fallos de refrigeración de la máquina',
     taskDifficulty:'Media',
-    taskSeconds: 72000
+    taskSeconds: 72000,
+    taskImage:'https://drive.google.com/uc?export=view&id=1kulpA7ZyuRL1eXIXdk5qEkkzy2Dxwp8V'
+
 
   }
 

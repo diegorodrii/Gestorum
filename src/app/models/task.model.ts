@@ -5,4 +5,5 @@ export interface Task {
     taskDescription: string;
     taskDifficulty: string;
     taskSeconds: number;
+    taskImage: string;
 }
