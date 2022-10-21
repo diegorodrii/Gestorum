@@ -28,7 +28,6 @@ export class TaskDetailComponent implements OnInit {
       id: [null],
       taskName: ['', [Validators.required]],
       taskDescription: ['', [Validators.required]],
-
       taskDifficulty: ['', [Validators.required]]
     })
   }
