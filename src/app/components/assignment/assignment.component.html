@@ -1,21 +1,21 @@
 <ion-item>
   <ion-label>
-    <h1 style="margin: 4%;">
-  
-      <ion-card>
-        <img style="margin-left: 12%;" src="{{ getUserSVC(assign.personId).image}}" />
-        <ion-icon name="analytics-outline" style="padding-bottom: 10%; margin-left: 5%; margin-right: 5%;"></ion-icon>
-        <img style="margin-left: 4%;" src="{{getTaskService(assign.taskId).taskImage}}" />
-        <ion-card-header>
-          <ion-card-title style="text-align: center;">{{ getUserSVC(assign.personId).name }} se encargará de
-            {{getTaskService(assign.taskId).taskName}}
-          </ion-card-title>
 
-        </ion-card-header>
 
-      </ion-card>
+    <ion-card>
+      <img src="{{ getUserSVC(assign.personId).image}}" />
+      <ion-icon name="analytics-outline" style="padding-bottom: 5.5%; margin-left: 3.5%;"></ion-icon>
+      <img style="margin-left: 4%;" src="{{getTaskService(assign.taskId).taskImage}}" />
+      <ion-card-header>
+        <ion-card-title>{{ getUserSVC(assign.personId).name }} se encargará de
+          {{getTaskService(assign.taskId).taskName}}
+        </ion-card-title>
 
-    </h1>
+      </ion-card-header>
+
+    </ion-card>
+
+
 
   </ion-label>
 </ion-item>
