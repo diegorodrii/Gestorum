@@ -1,10 +1,16 @@
 <ion-item>
   <ion-label>
-    <h1>
-    {{ getUserSVC(assign.personId).name }}
+    <h1 style="margin: 4%;">
+      {{ getUserSVC(assign.personId).name }} <br><img src="{{ getUserSVC(assign.personId).image}}" />
+      <ion-icon name="analytics-outline" style="padding-bottom: 10%; margin-left: 5%; margin-right: 5%;"></ion-icon>
+      <img src="{{getTaskService(assign.taskId).taskImage}}" />
+   
+      <div style="padding-top:3% ;">
+        {{ getTaskService(assign.taskId).taskName }}
+        La tarea tomará {{getTaskService(assign.taskId).taskSeconds}} segundos
+      </div>
+
     </h1>
-    <h1>
-      {{ getTaskService(assign.taskId).taskName }}
-    </h1>
+
   </ion-label>
 </ion-item>
