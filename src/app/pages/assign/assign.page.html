@@ -1,14 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+    <ion-buttons>
+      <ion-back-button slot="start" defaultHref="/">Return to Home</ion-back-button>
     </ion-buttons>
-    <ion-title>Assign</ion-title>
+    <ion-title slot="end">Assigns</ion-title>
   </ion-toolbar>
-  
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let assign of getAssignments()">
-    <app-assignment [assign]="assign"></app-assignment>
-  </ion-item></ion-content>
+  <ion-list-header>
+      <ion-label>Tareas</ion-label>
+  </ion-list-header>
+  <ion-list *ngFor="let assings of getAssing()"> 
+    <app-assignment [assign]="assings" (onEdit)="onEditAssign($event)" (onDelete)="onDeleteAssign($event)"></app-assignment>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
+      <ion-fab-button (click)="onNewAssign()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

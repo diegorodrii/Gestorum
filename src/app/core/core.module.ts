@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+
 import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 import { TaskComponent } from './components/task/task.component';
 import { UserComponent } from './components/user/user.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import { AssigmentDetailsComponent } from './components/assigment-details/assigment-details.component';
+import { AssignmentDetailsComponent } from './components/assigment-details/assigment-details.component';
 import { AssignmentComponent } from './components/assignment/assignment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -17,7 +18,7 @@ import { AssignmentComponent } from './components/assignment/assignment.componen
   TaskComponent,
   UserComponent,
   UserDetailComponent,
-  AssigmentDetailsComponent,
+  AssignmentDetailsComponent,
   AssignmentComponent],
 
   imports: [
@@ -35,7 +36,7 @@ import { AssignmentComponent } from './components/assignment/assignment.componen
     TaskComponent,
     UserComponent,
     UserDetailComponent,
-    AssigmentDetailsComponent,
+    AssignmentDetailsComponent,
     AssignmentComponent
   ]
 })

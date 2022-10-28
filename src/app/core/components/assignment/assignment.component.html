@@ -7,6 +7,7 @@
       <ion-icon name="analytics-outline" style="padding-bottom: 5.5%; margin-left: 3.5%;"></ion-icon>
       <img style="margin-left: 4%;" src="{{getTaskService(assign.taskId).taskImage}}" />
       <ion-card-header>
+        
         <ion-card-title>{{ getUserSVC(assign.personId).name }} se encargará de
           {{getTaskService(assign.taskId).taskName}}
         </ion-card-title>
@@ -15,7 +16,8 @@
 
     </ion-card>
 
-
+    <ion-button slot="end" color="danger" (click)="onDeleteClick()"><ion-icon name="trash-outline"></ion-icon></ion-button>
+    <ion-button slot="end" (click)="onEditClick()"><ion-icon name="create-outline"></ion-icon></ion-button>
 
   </ion-label>
 </ion-item>
