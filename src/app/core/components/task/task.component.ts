@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Task } from 'src/app/models/task.model';
+import { Task } from 'src/app/core/models/task.model';
 
 @Component({
   selector: 'app-task',

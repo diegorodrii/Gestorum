@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AssignPageRoutingModule } from './assign-routing.module';
 
 import { AssignPage } from './assign.page';
-import { AssignmentComponent } from 'src/app/components/assignment/assignment.component';
+import { AssignmentComponent } from 'src/app/core/components/assignment/assignment.component';
 
 @NgModule({
   imports: [

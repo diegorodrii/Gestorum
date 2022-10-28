@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AlertController, ModalController } from '@ionic/angular';
-import { TaskDetailComponent } from 'src/app/components/task-detail/task-detail.component';
-import { Task } from 'src/app/models/task.model';
-import { TasksService } from 'src/app/services/tasks.service';
+import { TaskDetailComponent } from 'src/app/core/components/task-detail/task-detail.component';
+import { Task } from 'src/app/core/models/task.model';
+import { TasksService } from 'src/app/core/services/tasks.service';
 
 @Component({
   selector: 'app-tasks',

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Assignment } from 'src/app/models/assignment.model';
-import { User } from 'src/app/models/person.model';
-import { PeopleService } from 'src/app/services/people.service';
-import { TasksService } from 'src/app/services/tasks.service';
+import { Assignment } from 'src/app/core/models/assignment.model';
+import { User } from 'src/app/core/models/person.model';
+import { PeopleService } from 'src/app/core/services/people.service';
+import { TasksService } from 'src/app/core/services/tasks.service';
 
 @Component({
   selector: 'app-assignment',

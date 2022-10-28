@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { PeoplePageRoutingModule } from './people-routing.module';
 
 import { PeoplePage } from './people.page';
-import { UserComponent } from '../../../../src/app/components/user/user.component';
-import { UserDetailComponent } from 'src/app/components/user-detail/user-detail.component';
+import { UserComponent } from '../../../../src/app/core/components/user/user.component';
+import { UserDetailComponent } from 'src/app/core/components/user-detail/user-detail.component';
 
 @NgModule({
   imports: [
@@ -18,6 +18,6 @@ import { UserDetailComponent } from 'src/app/components/user-detail/user-detail.
     PeoplePageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [PeoplePage, UserComponent, UserDetailComponent]
+  declarations: [PeoplePage, UserComponent,UserDetailComponent]
 })
 export class PeoplePageModule {}

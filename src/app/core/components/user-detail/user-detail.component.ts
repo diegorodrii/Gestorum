@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { User } from 'src/app/models/person.model';
-import { PeopleService } from 'src/app/services/people.service';
+import { User } from 'src/app/core/models/person.model';
+import { PeopleService } from 'src/app/core/services/people.service';
 
 @Component({
   selector: 'app-user-detail',

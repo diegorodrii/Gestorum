@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AlertController, ModalController } from '@ionic/angular';
-import { UserDetailComponent } from 'src/app/components/user-detail/user-detail.component';
-import { User } from 'src/app/models/person.model';
-import { PeopleService } from 'src/app/services/people.service';
+import { UserDetailComponent } from 'src/app/core/components/user-detail/user-detail.component';
+import { User } from 'src/app/core/models/person.model';
+import { PeopleService } from 'src/app/core/services/people.service';
 
 @Component({
   selector: 'app-people',

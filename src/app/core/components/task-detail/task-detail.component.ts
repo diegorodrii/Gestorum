@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { Task } from 'src/app/models/task.model';
-import { TasksService } from 'src/app/services/tasks.service';
+import { Task } from 'src/app/core/models/task.model';
 
 @Component({
   selector: 'app-task-detail',
@@ -23,7 +22,7 @@ export class TaskDetailComponent implements OnInit {
       this.mode = "Edit";
     }
   }
-  constructor(private taskService: TasksService, private fb: FormBuilder, private modal: ModalController) {
+  constructor(private fb: FormBuilder, private modal: ModalController) {
     this.form = this.fb.group({
       id: [null],
       taskName: ['', [Validators.required]],
@@ -51,8 +50,5 @@ export class TaskDetailComponent implements OnInit {
     this.modal.dismiss(null, 'cancel');
   }
 
-  getTasks(): Task[] {
-    return this.taskService.getTasks();
-  }
 
 }
