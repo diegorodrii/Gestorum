@@ -23,8 +23,8 @@ export class AssignmentDetailsComponent implements OnInit {
   @Input('assign') set assign(assign:Assignment){
     if(assign){
       this.form.controls.id.setValue(assign.id);
-      this.form.controls.idPerson.setValue(assign.personId);
-      this.form.controls.idTask.setValue(assign.taskId);
+      this.form.controls.personId.setValue(assign.personId);
+      this.form.controls.taskId.setValue(assign.taskId);
       this.form.controls.dateTime.setValue(assign.dateTime);
       this.mode = "Edit";
     }

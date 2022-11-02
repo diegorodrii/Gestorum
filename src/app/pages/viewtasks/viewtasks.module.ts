@@ -7,14 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ViewtasksPageRoutingModule } from './viewtasks-routing.module';
 
 import { ViewtasksPage } from './viewtasks.page';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ViewtasksPageRoutingModule
+
+    ViewtasksPageRoutingModule,
+    CoreModule
   ],
-  declarations: [ViewtasksPage]
+  declarations: []
 })
 export class ViewtasksPageModule {}

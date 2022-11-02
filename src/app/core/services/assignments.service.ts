@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Assignment } from '../models/assignment.model';
+import * as moment from 'moment-timezone';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AssignmentsService {
-
+  private moment:any = moment;
+ 
   private _assignments: Assignment[] = [
     {
       id: 1,
       personId: 1,
       taskId: 1,
-      createdAt: "2022-10-20 T10:40",
-      dateTime: "2022-10-25 T10:40"
+      dateTime:this.moment().add(1,'days').toLocaleString(),
+      createdAt:this.moment().toLocaleString()
     },
     {
       id: 2,
@@ -44,13 +46,13 @@ export class AssignmentsService {
     this._assignments.push(assignment);
   }
   constructor() { }
-  updateAssignment(assing: Assignment) {
-    var assignment = this._assignments.find(p => p.id == assing.id);
+  updateAssignment(assignment: Assignment) {
+    var assignment = this._assignments.find(p => p.id == assignment.id);
 
-    if (assing) {
-      assignment.personId = assing.personId;
-      assignment.taskId = assing.taskId;
-      assignment.dateTime = assing.dateTime;
+    if (assignment) {
+      assignment.personId = assignment.personId;
+      assignment.taskId = assignment.taskId;
+      assignment.dateTime = assignment.dateTime;
 
     }
   }

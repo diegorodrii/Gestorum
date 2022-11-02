@@ -12,7 +12,7 @@
       <ion-list>
         <ion-item >
           <ion-select formControlName="idPerson" placeholder="Nombre Persona">
-            <ion-select-option *ngFor="let person of getPeople()" [value]="person.id">{{user.nombre}}</ion-select-option>
+            <ion-select-option *ngFor="let person of getPeople()" [value]="person.id">{{user.name}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>
@@ -20,7 +20,7 @@
       <ion-list>
         <ion-item>
           <ion-select  formControlName="idTask" placeholder="Nombre Tarea">
-            <ion-select-option *ngFor="let task of getTask()" [value]="task.id">{{task.nombre}}</ion-select-option>
+            <ion-select-option *ngFor="let task of getTask()" [value]="task.id">{{task.taskName}}</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>

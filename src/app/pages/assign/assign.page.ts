@@ -11,9 +11,9 @@ import { AssignmentsService } from 'src/app/core/services/assignments.service';
 })
 export class AssignPage implements OnInit {
   
-  public assings:Assignment;
+  public assigns:Assignment;
   constructor(
-    private _dataAssingment:AssignmentsService,
+    private _dataAssignment:AssignmentsService,
     private modal:ModalController,
     private alert:AlertController
   ) { }
@@ -22,8 +22,8 @@ export class AssignPage implements OnInit {
   }
 
   
-  getAssing(){
-    return this._dataAssingment.getAssignments();
+  getAssign(){
+    return this._dataAssignment.getAssignments();
     
   }
 
@@ -40,10 +40,10 @@ export class AssignPage implements OnInit {
         switch(result.data.mode){
           
           case 'New':
-            this._dataAssingment.addAssignment(result.data.assing);
+            this._dataAssignment.addAssignment(result.data.assign);
             break;
           case 'Edit':
-            this._dataAssingment.updateAssignment(result.data.assing);
+            this._dataAssignment.updateAssignment(result.data.assign);
             break;
           default:
         }
@@ -74,7 +74,7 @@ export class AssignPage implements OnInit {
           role: 'confirm',
           handler: () => {
           
-              this._dataAssingment.deleteAssignmentById(assign.id);
+              this._dataAssignment.deleteAssignmentById(assign.id);
 
           },
         },

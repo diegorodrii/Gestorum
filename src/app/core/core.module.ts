@@ -9,12 +9,20 @@ import { AssignmentDetailsComponent } from './components/assigment-details/assig
 import { AssignmentComponent } from './components/assignment/assignment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { AssignPage } from '../pages/assign/assign.page';
+import { PeoplePage } from '../pages/people/people.page';
+import { TasksPage } from '../pages/tasks/tasks.page';
+import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
 
 
 
 
 @NgModule({
-  declarations:[TaskDetailComponent,
+  declarations:[AssignPage,
+  PeoplePage,
+  TasksPage,
+  ViewtasksPage,
+  TaskDetailComponent,
   TaskComponent,
   UserComponent,
   UserDetailComponent,

@@ -1,23 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
 
 import { PeoplePageRoutingModule } from './people-routing.module';
 
-import { PeoplePage } from './people.page';
-import { UserComponent } from '../../../../src/app/core/components/user/user.component';
-import { UserDetailComponent } from 'src/app/core/components/user-detail/user-detail.component';
+
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
     PeoplePageRoutingModule,
-    ReactiveFormsModule
+    CoreModule,
   ],
-  declarations: [PeoplePage, UserComponent,UserDetailComponent]
+  declarations: []
 })
 export class PeoplePageModule {}
