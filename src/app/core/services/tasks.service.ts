@@ -56,8 +56,8 @@ export class TasksService {
     return this._tasks;
   }
 
-  public getTasksById(id: number): Task{
-    return this._tasks[id];
+  public getTasksById(id: number){
+    return this._tasks.find(p=>p.id==id);
   }
 
   addTask(task:Task){

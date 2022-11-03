@@ -11,7 +11,9 @@
         <ion-card-title>{{ getUserSVC(assign.personId).name }} se encargará de
           {{getTaskService(assign.taskId).taskName}}
         </ion-card-title>
-
+        <ion-card-subtitle>
+          {{assign.dateTime | date: 'short'}}
+        </ion-card-subtitle>
       </ion-card-header>
 
     </ion-card>

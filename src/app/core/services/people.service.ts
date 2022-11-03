@@ -41,8 +41,8 @@ export class PeopleService {
     return this._people;
   }
 
-  public getPeopleById(id: number): User{
-    return this._people[id];
+  public getPeopleById(id: number){
+    return this._people.find(p=>p.id==id);
   }
 
   addUser(user:User){

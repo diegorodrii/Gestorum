@@ -34,7 +34,7 @@ export class AssignmentDetailsComponent implements OnInit {
               private modal:ModalController
     ) {
     this.form = this.formBuilder.group({ 
-      id:[0],
+      id:[null],
       personId:[0,Validators.min(1)],
       taskId:[0,Validators.min(1)],
       dateTime:["",Validators.required]
