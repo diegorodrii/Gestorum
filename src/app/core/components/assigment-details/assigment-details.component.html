@@ -17,9 +17,7 @@
       <ion-icon name="repeat-outline"></ion-icon>
       <ion-list>
         <ion-item>
-          <ion-select  formControlName="taskId" placeholder="Nombre Tarea">
-            <ion-select-option *ngFor="let task of getTask()" [value]="task.id">{{task.taskName}}</ion-select-option>
-          </ion-select>
+          <app-task-selectable formControlName="taskId"></app-task-selectable>
         </ion-item>
       </ion-list>
     </ion-item>

@@ -14,6 +14,7 @@ import { PeoplePage } from '../pages/people/people.page';
 import { TasksPage } from '../pages/tasks/tasks.page';
 import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
 import { UserSelectableComponent } from './components/user-selectable/user-selectable.component';
+import { TaskSelectableComponent } from './components/task-selectable/task-selectable.component';
 
 
 
@@ -29,7 +30,8 @@ import { UserSelectableComponent } from './components/user-selectable/user-selec
   UserDetailComponent,
   AssignmentDetailsComponent,
   AssignmentComponent,
-  UserSelectableComponent],
+  UserSelectableComponent,
+  TaskSelectableComponent],
 
   imports: [
     CommonModule,
@@ -48,7 +50,8 @@ import { UserSelectableComponent } from './components/user-selectable/user-selec
     UserDetailComponent,
     AssignmentDetailsComponent,
     AssignmentComponent,
-    UserSelectableComponent
+    UserSelectableComponent,
+    TaskSelectableComponent
   ]
 })
 export class CoreModule { }
