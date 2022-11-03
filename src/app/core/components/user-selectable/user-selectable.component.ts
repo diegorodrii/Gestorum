@@ -29,6 +29,7 @@ export class UserSelectableComponent implements OnInit, ControlValueAccessor {
 
 
   writeValue(obj: any): void {
+    console.log(this.UserSVC.getPeopleById(obj).image);
     this.selectedUser = this.UserSVC.getPeopleById(obj);
   }
   registerOnChange(fn: any): void {
@@ -48,6 +49,7 @@ export class UserSelectableComponent implements OnInit, ControlValueAccessor {
   } 
 
   onUserClicked(user:User, accordion:IonAccordionGroup){
+    console.log(user);
     this.selectedUser = user;
     accordion.value='';
     this.propagateChange(this.selectedUser.id);

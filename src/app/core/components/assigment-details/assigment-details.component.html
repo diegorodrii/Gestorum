@@ -11,9 +11,7 @@
     <ion-item>
       <ion-list>
         <ion-item >
-          <ion-select formControlName="personId" placeholder="Nombre Usuario">
-            <ion-select-option *ngFor="let user of getPeople()" [value]="user.id">{{user.name}}</ion-select-option>
-          </ion-select>
+            <app-user-selectable formControlName="personId"></app-user-selectable>
         </ion-item>
       </ion-list>
       <ion-icon name="repeat-outline"></ion-icon>
