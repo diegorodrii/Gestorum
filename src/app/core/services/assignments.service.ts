@@ -20,15 +20,15 @@ export class AssignmentsService {
       id: 2,
       personId: 2,
       taskId: 2,
-      createdAt: "2022-10-20 T10:50",
-      dateTime: "2022-10-25 T20:40"
+      dateTime:this.moment().add(1,'days').toLocaleString(),
+      createdAt:this.moment().toLocaleString()
     },
     {
       id: 3,
       personId: 3,
       taskId: 3,
-      createdAt: "2022-10-20 T11:15",
-      dateTime: "2022-10-29 T17:40"
+      dateTime:this.moment().add(1,'days').toLocaleString(),
+      createdAt:this.moment().toLocaleString()
     }
 
   ]
@@ -46,13 +46,14 @@ export class AssignmentsService {
     this._assignments.push(assignment);
   }
   constructor() { }
-  updateAssignment(assignment: Assignment) {
-    var assignment = this._assignments.find(p => p.id == assignment.id);
+  updateAssignment(assignments: Assignment) {
+    console.log(this._assignments.find(p => p.id == assignments.id));
 
-    if (assignment) {
-      assignment.personId = assignment.personId;
-      assignment.taskId = assignment.taskId;
-      assignment.dateTime = assignment.dateTime;
+    var assign = this._assignments.find(p => p.id == assignments.id);
+    if (assignments) {
+      assign.personId = assignments.personId;
+      assign.taskId = assignments.taskId;
+      assign.dateTime = assignments.dateTime;
 
     }
   }

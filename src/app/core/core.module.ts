@@ -13,6 +13,7 @@ import { AssignPage } from '../pages/assign/assign.page';
 import { PeoplePage } from '../pages/people/people.page';
 import { TasksPage } from '../pages/tasks/tasks.page';
 import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
+import { UserSelectableComponent } from './components/user-selectable/user-selectable.component';
 
 
 
@@ -27,7 +28,8 @@ import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
   UserComponent,
   UserDetailComponent,
   AssignmentDetailsComponent,
-  AssignmentComponent],
+  AssignmentComponent,
+  UserSelectableComponent],
 
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
     UserComponent,
     UserDetailComponent,
     AssignmentDetailsComponent,
-    AssignmentComponent
+    AssignmentComponent,
+    UserSelectableComponent
   ]
 })
 export class CoreModule { }

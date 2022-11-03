@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Assignment } from '../../models/assignment.model';
-import { User } from '../../models/person.model';
-import { Task } from '../../models/task.model';
 import { PeopleService } from '../../services/people.service';
 import { TasksService } from '../../services/tasks.service';
 
@@ -36,22 +34,18 @@ export class AssignmentDetailsComponent implements OnInit {
               private modal:ModalController
     ) {
     this.form = this.formBuilder.group({ 
-      id:0,
+      id:[0],
       personId:[0,Validators.min(1)],
       taskId:[0,Validators.min(1)],
       dateTime:["",Validators.required]
     });
   }
 
-  @Input() user:User;
-
-  @Input() task:Task;
-
   ngOnInit() {}
 
   onSubmit(){
     console.log(this.form.value)
-      this.modal.dismiss({assing: this.form.value, mode: this.mode}, 'ok')
+      this.modal.dismiss({assign: this.form.value, mode: this.mode}, 'ok')
   }
 
   onDismiss(result){
@@ -67,7 +61,6 @@ export class AssignmentDetailsComponent implements OnInit {
   }
 
   onChange(event){
-    console.log(event.detail.value);
     this.form.controls.dateTime.setValue(event.detail.value);
   }
 
