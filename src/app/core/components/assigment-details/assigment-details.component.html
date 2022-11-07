@@ -21,16 +21,8 @@
         </ion-item>
       </ion-list>
     </ion-item>
-    <ion-item>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          
-          <ion-datetime id="datetime" (ionChange)="onChange($event)"></ion-datetime>
-        </ng-template>
-      </ion-modal>
-    </ion-item>
-      
+      <app-date-time-selectable formControlName="dateTime"></app-date-time-selectable>
+        
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
   </form>
 </ion-content>

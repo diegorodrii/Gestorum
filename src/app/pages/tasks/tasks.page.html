@@ -15,7 +15,7 @@
       <ion-icon style="zoom:2" name="add-outline"></ion-icon>
     </ion-button>
   </ion-item>
-  <ion-item *ngFor="let task of getTasks()">
+  <ion-item *ngFor="let task of getTasks() | async" size="9" size-sm="3" class="ion-align-self-center">
     <app-task [taskInput]="task"></app-task>
     <ion-button (click)="onEditTask(task)">
       <ion-icon name="create-outline"></ion-icon>

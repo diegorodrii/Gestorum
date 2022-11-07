@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/person.model';
 
 @Injectable({
@@ -32,7 +33,8 @@ export class PeopleService {
   }
 
   ]
-
+  private userSubject:BehaviorSubject<User[]> = new BehaviorSubject(this._people);
+  public user$ = this.userSubject.asObservable();
   id:number = this._people.length+1;
 
   constructor() { }

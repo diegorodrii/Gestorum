@@ -29,7 +29,6 @@ export class UserSelectableComponent implements OnInit, ControlValueAccessor {
 
 
   writeValue(obj: any): void {
-    console.log(this.UserSVC.getPeopleById(obj).image);
     this.selectedUser = this.UserSVC.getPeopleById(obj);
   }
   registerOnChange(fn: any): void {

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Assignment } from '../models/assignment.model';
 import * as moment from 'moment-timezone';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ export class AssignmentsService {
     }
 
   ]
+
+  private assignSubject:BehaviorSubject<Assignment[]> = new BehaviorSubject(this._assignments);
+  public assign$ = this.assignSubject.asObservable();
+  
   id: number = this._assignments.length + 1;
   getAssignments() {
     return this._assignments;

@@ -15,6 +15,7 @@ import { TasksPage } from '../pages/tasks/tasks.page';
 import { ViewtasksPage } from '../pages/viewtasks/viewtasks.page';
 import { UserSelectableComponent } from './components/user-selectable/user-selectable.component';
 import { TaskSelectableComponent } from './components/task-selectable/task-selectable.component';
+import { DateTimeSelectableComponent } from './components/date-time-selectable/date-time-selectable.component';
 
 
 
@@ -31,7 +32,9 @@ import { TaskSelectableComponent } from './components/task-selectable/task-selec
   AssignmentDetailsComponent,
   AssignmentComponent,
   UserSelectableComponent,
-  TaskSelectableComponent],
+  TaskSelectableComponent,
+  DateTimeSelectableComponent
+],
 
   imports: [
     CommonModule,
@@ -51,7 +54,8 @@ import { TaskSelectableComponent } from './components/task-selectable/task-selec
     AssignmentDetailsComponent,
     AssignmentComponent,
     UserSelectableComponent,
-    TaskSelectableComponent
+    TaskSelectableComponent,
+    DateTimeSelectableComponent
   ]
 })
 export class CoreModule { }

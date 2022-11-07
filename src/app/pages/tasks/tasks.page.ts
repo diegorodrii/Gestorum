@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AlertController, ModalController } from '@ionic/angular';
+import { AssignmentsService } from 'src/app/core';
 import { TaskDetailComponent } from 'src/app/core/components/task-detail/task-detail.component';
 import { Task } from 'src/app/core/models/task.model';
 import { TasksService } from 'src/app/core/services/tasks.service';
@@ -13,25 +14,20 @@ import { TasksService } from 'src/app/core/services/tasks.service';
 export class TasksPage implements OnInit {
 
   tasks: Task;
-  form: FormGroup;
+
 
   constructor(private taskService: TasksService,
     private fb: FormBuilder,
     private modal: ModalController,
-    private alert: AlertController
+    private alert: AlertController,
+    private assignService: AssignmentsService
   ) {
-    this.form = this.fb.group({
-      taskName: '',
-      taskDescription: '',
-      taskDifficulty: ''
-    });
+
   }
 
   ngOnInit() {
   }
-  createTask() {
-    console.log(this.form.value); //It is called when push the form button
-  }
+
 
 
 
@@ -43,7 +39,7 @@ export class TasksPage implements OnInit {
 
 
   getTasks() {
-    return this.taskService.getTasks();
+    return this.taskService.task$;
   }
 
   async presentTaskForm(task: Task) {
@@ -105,10 +101,31 @@ export class TasksPage implements OnInit {
 
     const { role } = await alert.onDidDismiss();
   }
+  async onTaskExistsAlert(task) {
+    const alert = await this.alert.create({
+      header: 'Error',
+      message: 'No es posible borrar la tarea porque está asignada a un usuario',
+      buttons: [
+        {
+          text: 'Cerrar',
+          role: 'close',
+          handler: () => {
+          },
+        },
+      ],
+    });
 
-  onDeleteTask(task) {
-    this.onDeleteAlert(task);
+    await alert.present();
 
+    const { role } = await alert.onDidDismiss();
+  }
+
+  onDeleteTask(task){
+    if(!this.assignService.getAssignmentsById(task.id))
+      this.onDeleteAlert(task);
+    else
+      this.onTaskExistsAlert(task);
+    
   }
 
 }
